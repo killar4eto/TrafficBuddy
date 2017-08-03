@@ -22,6 +22,7 @@
 		overflow-y: scroll;
 	}
 	</style>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCgPECsv6CNriZlqLYJY2EMyOShqKSbKBc"></script>
 </head>	
 <body>
 	<div class="container">
@@ -32,7 +33,7 @@
 					<option value="25">25 Cars</option>
 					<option value="50">50 Cars</option>
 					<option value="100">100 Cars</option>
-					<option value="1000">1000 Cars</option>
+					<option value="1000" selected>1000 Cars</option>
 				</select>
 			</div>
 			<div class="col-md-7">
@@ -56,18 +57,11 @@
 			</div>
 		</div>
 	</div>	
-	
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<!-- Latest compiled and minified JavaScript -->
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<!--Cluster JS-->
+    <script src="./js/cluster.js"></script>
 
 	<!-- Custom Map JS File !-->
-	<!--<script src="./jsMap.js"></script>-->
 	<script src="./OldMap.js"></script>
 	
-	<!-- Google Map Key !-->
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCgPECsv6CNriZlqLYJY2EMyOShqKSbKBc&callback=initMap"></script>
-	
-</body>
+  </body>
 </html>
