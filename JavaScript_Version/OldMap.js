@@ -1,10 +1,16 @@
-document.addEventListener("DOMContentLoaded", function() {	
+var timer;
+
+document.addEventListener("DOMContentLoaded", function() {
+
 	initMap();		
+
 });
 
 
 function initMap() {
 	
+window.clearTimeout(timer);
+
 var map = new google.maps.Map(document.getElementById('map'), {
   zoom: 2,
   center: new google.maps.LatLng(53.002421, 23.887001),
@@ -71,7 +77,9 @@ markers = locations.map(function(location, i) {
 
 // Add a marker clusterer to manage the markers.
 markerCluster = new MarkerClusterer(map, markers,
-	{imagePath: './images/m'});	
+	{imagePath: './images/m'});
+
+endAndStartTimer();
 }
 
 function getNumbers(min, max) {
@@ -86,4 +94,12 @@ function getNumbers(min, max) {
 function randomGeo(from, to, fixed) {
     return parseFloat(((Math.random() * (to - from) + from))).toFixed(fixed) * 1;
     // .toFixed() returns string, so ' * 1' is a trick to convert to number
+}
+
+function endAndStartTimer() {
+  window.clearTimeout(timer);
+  //var millisecBeforeRedirect = 10000; 
+  timer = window.setTimeout(function(){
+	  initMap();
+  },5000); 
 }
